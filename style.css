@@ -1,0 +1,32 @@
+body {
+    max-width: 45rem;
+    background-color: silver;
+    color: midnightblue;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: auto;
+    
+    
+}
+
+html {
+    font-size: 100%;
+}
+
+.our-div {
+    text-align: left;  
+}
+
+h2 {
+    font-size: 4rem;
+    margin-bottom: -6px;
+}
+
+h3 {
+    font-size: 3rem;
+}
+/*removed paragraphs 2-4 and renamed class to 'paragraphs'*/
+.paragraphs {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+}
+

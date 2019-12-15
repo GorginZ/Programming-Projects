@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Georgia Zoi Leng</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>   
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet"> 
+    <link rel="icon" href="./img/favicon.png">
+    </head>
+  <body>
+    <h2> Georgia Zoi Leng </h2>
+    <a href="https://github.com/GorginZ" target="_blank">       
+    <img src="./img/github_icon.png" alt="My GitHub"
+    width="53.5" height="51.5">
+    </a>
+    <canvas id="mycanvas">
+    </canvas> 
+    <a href="https://www.youtube.com/watch?v=2A7QejRAILM" target="_blank">       
+      <img src="./img/pngfuel.com.png" alt="Bach Prelude in C"
+      width="40" height="40">
+      </a>  
+   
+    <div class="our-div">
+    <p class="paragraphs"> I feel at home in the world
+      when I am swimming, playing piano
+      and discussing music and literature with my brother.
+      And I love to cook for my wonderful friends! 
+    </p>
+    <hr>
+
+        <h3> What has drawn you to coding? </h3>
+        <p class="paragraphs"> I am generally unsatisfied if
+          I feel I only have a surface level understanding of a process
+          or mechanism. 
+          I have a deep desire to understand <i>how</i> things around me function. 
+          Whether it's something I feel relates to me immediately 
+          - like a biological process,  
+          the breaks on my road bike, a new weird sound on a modular synthesiser
+           or the dynamics of historical transition between epochs.
+          I have a keen pleasure for getting to the fundamentals
+          of what drives the processes that occur around me 
+          and I always have fun doing it! Coding presents an exciting way for me
+          to help shape the world around me and contribute to something
+          bigger than myself.   </p>
+    
+    <hr>
+
+    <h3> What do you hope for from the course? </h3>
+    <p class="paragraphs"> I hope to feel immersed in a learning
+      community. I've taken up a few hobbies and interests
+      since graduating and having time without work (following
+      a serious spinal injury), but
+      it can be less gratifying without having a reciprocal social 
+      and formal environment.
+      Learning a complex new skill like coding or a language requires 
+      a consistent learning routine and environment and I feel the full-time schedule will satisfy
+      the immersion I think is so crucial for this kind of learning. 
+      The other equally important thing that I am excited by is cultural element involved. 
+      I look forward to being around other
+      people who are learning alongside me and learning from educators who 
+      are passionate about their craft. 
+      I hope to be equipped with the skills I need to be capable of
+      creating programs or components of programs that can concretely
+      contribute something to the goings on of the world - in a professional
+      setting but also a social setting. 
+    
+   </p>
+
+    <hr>
+
+    <h3> What do you hope to do after the course? </h3>
+    <p class="paragraphs"> SO MUCH! I'm here because I have an 
+      amazing opportunity from MYOB to develop a new skill set. 
+      I hope to become part of a team that values a culture of education
+      and has shown concrete leadership in adressing the barriers that
+      exist in regards to women pursuing a pathway in tech. I identify 
+      strongly with the values underpinning the developher program 
+      and if I am succesful and do have a role at MYOB I would hope
+      in the next 5 years I could play a role
+      helping to facilitate the program. </p>
+    
+    
+
+  </body>
+
+ <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+ 
+ <script>
+	var bodyX = 25;
+	var bodyY = 27.5;
+	var bodyW = 38;
+	var bodyH = 33;
+	var headX = bodyX*0.87;
+	var headY = bodyY*0.50;
+	var headW = bodyW*0.50;
+	var headH = bodyH*0.50;
+	var tail = bodyX*0.20;
+ 
+ 
+    var sketchProc = function(processingInstance) {
+     with (processingInstance) {
+        size(50,50); 
+        frameRate(15);
+
+draw = function() {
+    background(192,192,192)
+   
+    fill(240, 209, 36);
+    ellipse(bodyX, bodyY, bodyW, bodyH); // body
+    
+    ellipse(headX, headY, headW, headH); // head
+    fill(20, 29, 1);
+fill (237, 10, 90)
+
+ ellipse(headX/0.90,headY/2.4,headX/2.11,headY/11.4);    //comb1
+      //     ellipse(headX/1.25,headY/2.4,headX/2.11,headY/11.4);   //comb2
+       //    ellipse(headX/1.50,headY/2.4,headX/2.11,headY/11.4); 
+    
+fill(60,20,40)
+    line(bodyX,bodyY*1.56,bodyX,bodyY*1.95);  //legs
+    line(bodyX*0.9,bodyY*1.75,bodyX*0.9,bodyY*1.55); 
+    
+curve(bodyX*.80,bodyY/27,bodyX*1.61,bodyY,bodyX,bodyY,bodyX,bodyY);  //wing
+    
+    fill (150, 50, 10);
+    triangle (headX*0.2,headY/1,headX*0.58,headY/0.80,headX*0.56,headY/1.26);
+
+    var eyeSize = 1/18 * bodyH;
+    var eyeXpos = headX*0.9;
+    var eyeYpos = headY*0.94;
+    
+fill (0, 0, 0);
+    ellipse(eyeXpos,eyeYpos, eyeSize,eyeSize);
+
+
+if(headX>15){
+    headX--;
+}
+else if (headX=10)
+	headX = bodyX*0.87;
+	headY = bodyY*0.5;
+}
+  }
+  }
+    var canvas = document.getElementById("mycanvas"); 
+    var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
+
+</html>
